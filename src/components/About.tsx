@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import aboutImage from "../assets/compactbase-logo-black.png";
 import "../styles/components/about.scss";
 
 const About = () => {
@@ -26,7 +27,7 @@ const About = () => {
             A Compactbase se destaca pelo profissionalismo, competência e dedicação de sua equipe, oferecendo soluções eficientes e sustentáveis para atender às necessidades de cada cliente.
           </p>
         </div>
-        <img src="src/assets/compactbase-logo-black.png" alt="sobre-img" />
+        <img src={aboutImage} alt="Sobre Nós" />
       </div>
     </motion.section>
   );

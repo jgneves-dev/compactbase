@@ -1,36 +1,41 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
+import newsImage1 from "../assets/compactbase-banner.png";
+import newsImage2 from "../assets/compactbase-banner.png";
+import newsImage3 from "../assets/compactbase-banner.png";
+import newsImage4 from "../assets/compactbase-banner.png";
+import newsImage5 from "../assets/compactbase-banner.png";
 import "../styles/components/news.scss";
 
 const News = () => {
   const newsItems = [
     {
-      image: "src/assets/compactbase-banner.png",
+      image: newsImage1,
       date: "15 de Fevereiro de 2025",
       title: "Projeto de Construção Empolgante Concluído!",
       link: "/detalhes-noticia-1"
     },
     {
-      image: "src/assets/compactbase-banner.png",
+      image: newsImage2,
       date: "10 de Março de 2025",
       title: "Novo Edifício de Escritórios Inaugurado no Centro",
       link: "/detalhes-noticia-2"
     },
     {
-      image: "src/assets/compactbase-banner.png",
+      image: newsImage3,
       date: "5 de Abril de 2025",
       title: "CompactBase Ganha Prêmio da Indústria",
       link: "/detalhes-noticia-3"
     },
     {
-      image: "src/assets/compactbase-banner.png",
+      image: newsImage4,
       date: "20 de Maio de 2025",
       title: "Anúncio de Nova Parceria",
       link: "/detalhes-noticia-4"
     },
     {
-      image: "src/assets/compactbase-banner.png",
+      image: newsImage5,
       date: "15 de Junho de 2025",
       title: "Próximo Webinar sobre Tendências da Indústria",
       link: "/detalhes-noticia-5"

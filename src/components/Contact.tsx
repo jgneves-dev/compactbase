@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import "../styles/components/contact.scss";
 import googleMapsLogo from "../assets/google-map-icon.svg";
 import wazeLogo from "../assets/waze-icon.svg";
+import "../styles/components/contact.scss";
 
 const Contact = () => {
   const [selectedMap, setSelectedMap] = useState("google");

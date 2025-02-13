@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import projectImage1 from "../assets/compactbase-banner.png";
+import projectImage2 from "../assets/compactbase-banner-white.png";
+import projectImage3 from "../assets/compactbase-banner.png";
 import "../styles/components/projects.scss";
 
 type Project = {
@@ -13,20 +16,20 @@ const projects = [
   {
     id: 1,
     title: "Projeto 1",
-    img: "src/assets/compactbase-banner.png",
-    images: ["src/assets/compactbase-banner.png", "src/assets/compactbase-banner-white.png", "src/assets/compactbase-banner.png"]
+    img: projectImage1,
+    images: [projectImage1, projectImage2, projectImage1]
   },
   {
     id: 2,
     title: "Projeto 2",
-    img: "src/assets/compactbase-banner-white.png",
-    images: ["src/assets/compactbase-banner-white.png", "src/assets/compactbase-banner.png", "src/assets/compactbase-banner-white.png"]
+    img: projectImage2,
+    images: [projectImage2, projectImage1, projectImage2]
   },
   {
     id: 3,
     title: "Projeto 3",
-    img: "src/assets/compactbase-banner.png",
-    images: ["src/assets/compactbase-banner.png", "src/assets/compactbase-banner-white.png", "src/assets/compactbase-banner.png"]
+    img: projectImage3,
+    images: [projectImage3, projectImage2, projectImage3]
   },
 ];
 
