@@ -47,7 +47,7 @@ const News = () => {
     return () => clearInterval(interval);
   }, [newsItems.length]);
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
 

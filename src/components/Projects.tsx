@@ -2,6 +2,13 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../styles/components/projects.scss";
 
+type Project = {
+  id: number;
+  title: string;
+  img: string;
+  images: string[];
+};
+
 const projects = [
   {
     id: 1,
@@ -24,10 +31,10 @@ const projects = [
 ];
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [selectedImage, setSelectedImage] = useState(0);
 
-  const handleImageClick = (project) => {
+  const handleImageClick = (project: Project) => {
     setSelectedProject(project);
     setSelectedImage(0);
   };

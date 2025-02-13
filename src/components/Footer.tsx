@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebookF, FaLinkedin } from "react-icons/fa";
 import logo from "../assets/compactbase-symbol.png";
 import "../styles/components/footer.scss";
 
