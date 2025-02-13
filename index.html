@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Compactbase - Quality Building Services" />
+  <title>Compactbase | Tratamento de Bases</title>
+  <link rel="icon" type="image/png" href="/src/assets/compactbase-symbol.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="/src/styles/global.scss" />
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+  <script>
+    const titleText = "Tratamento\u00A0 de\u00A0 Bases\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0";
+    let scrollIndex = 0;
+
+    function updateTitle() {
+      const scrollText = titleText.substring(scrollIndex) + titleText.substring(0, scrollIndex);
+      document.title = `Compactbase | ${scrollText}`;
+      scrollIndex = (scrollIndex + 1) % titleText.length;
+    }
+
+    setInterval(updateTitle, 250);
+  </script>
+</body>
+</html>

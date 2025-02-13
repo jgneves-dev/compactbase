@@ -1,0 +1,54 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: $background-color;
+  color: $text-color;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes rotate-bar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.scrolling-title {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: scroll-left 10s linear infinite;
+}
+
+.rotating-bar {
+  display: inline-block;
+  animation: rotate-bar 2s linear infinite;
+}

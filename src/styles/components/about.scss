@@ -1,0 +1,39 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.about {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $text-color;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .about-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    p {
+      max-width: 600px;
+      font-size: 1.1rem;
+      margin-right: 2rem;
+      margin-bottom: 1rem; /* Add space between paragraphs */
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+  }
+}

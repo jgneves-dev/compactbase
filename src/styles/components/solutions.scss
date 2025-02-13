@@ -1,0 +1,60 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.solutions {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $background-color;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $text-color;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%; 
+  }
+
+  .solution-card {
+    background: $secondary-color;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    h3 {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: $text-secondary-color;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        color: $text-secondary-color;
+      }
+    }
+
+    svg {
+      font-size: 3rem;
+      color: $primary-color;
+    }
+  }
+}

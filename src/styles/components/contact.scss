@@ -1,0 +1,143 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "sass:color";
+
+.contact {
+  padding: 4rem 2rem;
+  background: $background-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $primary-color;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+  }
+
+  form {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+
+    input, textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background: $primary-color;
+      color: white;
+      border: none;
+      padding: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: color.adjust($primary-color, $lightness: -10%);
+      }
+    }
+  }
+
+  .contact-info {
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+
+    p {
+      margin: 0.5rem 0;
+    }
+
+    .map-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+
+      @media (max-width: 767px) {
+        iframe {
+          height: 300px;
+        }
+      }
+    }
+
+    .map-tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+
+      @media (min-width: 768px) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        margin-top: -8px;
+        margin-left: 1rem;
+      }
+
+      @media (max-width: 767px) {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+
+      button {
+        background: $secondary-color;
+        color: white;
+        border: none;
+        padding: 0.5rem;
+        cursor: pointer;
+        transition: 0.3s;
+        margin: 0.5rem;
+        width: 50px;
+        height: 50px;
+
+        img {
+          height: 24px;
+          width: auto;
+        }
+
+        &.active {
+          background: $primary-color;
+        }
+
+        &:hover {
+          background: color.adjust($primary-color, $lightness: -10%);
+        }
+      }
+    }
+  }
+}
