@@ -1,5 +1,6 @@
 @use "../variables" as *;
 @use "../mixins" as *;
+@use "../global" as *;
 @use "sass:color";
 
 .contact {
@@ -10,11 +11,7 @@
   align-items: center;
 
   h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: $primary-color;
-    margin-bottom: 2rem;
-    text-align: center;
+    @extend .section-title;
   }
 
   .contact-content {

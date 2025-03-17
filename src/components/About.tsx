@@ -11,7 +11,7 @@ const About = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
-      <h2>Sobre Nós</h2>
+      <h2 className="section-title">Sobre Nós</h2>
       <div className="about-content">
         <div>
           <p>

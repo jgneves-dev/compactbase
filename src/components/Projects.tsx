@@ -54,7 +54,7 @@ const Projects = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <h2>Projetos</h2>
+      <h2 className="section-title">Projetos</h2>
       <div className="projects-grid">
         {projects.map((project) => (
           <div key={project.id} className="project-card" onClick={() => handleImageClick(project)}>

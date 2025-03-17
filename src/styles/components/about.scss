@@ -1,5 +1,6 @@
 @use "../variables" as *;
 @use "../mixins" as *;
+@use "../global" as *;
 
 .about {
   padding: 4rem 2rem;
@@ -8,11 +9,7 @@
   align-items: center;
 
   h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: $text-color;
-    margin-bottom: 2rem;
-    text-align: center;
+    @extend .section-title;
   }
 
   .about-content {
@@ -25,8 +22,8 @@
       max-width: 600px;
       font-size: 1.1rem;
       margin-right: 2rem;
-      margin-bottom: 1rem; /* Add space between paragraphs */
-      text-align: justify;
+      margin-bottom: 1rem;
+      text-align: end;
       text-justify: inter-word;
     }
 

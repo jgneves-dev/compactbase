@@ -19,8 +19,8 @@ const Hero = () => {
         Your browser does not support the video tag.
       </video>
       <div className="hero-content">
-        <h1>Construindo o Futuro</h1>
-        <p>O seu parceiro de construção confiável.</p>
+        <h1>Building the Future</h1>
+        <p>O seu parceiro de construção de confiança.</p>
       </div>
     </motion.section>
   );

@@ -59,9 +59,15 @@ const News = () => {
   const currentNews = newsItems[currentIndex];
 
   return (
-    <section id="notícias" className="news">
+    <motion.section
+      id="notícias"
+      className="news container"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <h2 className="section-title">Notícias</h2>
-      <motion.div 
+      <motion.div
         className="news-container"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -100,7 +106,7 @@ const News = () => {
           </div>
         </div>
       </motion.div>
-    </section>
+    </motion.section>
   );
 };
 

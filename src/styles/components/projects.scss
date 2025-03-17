@@ -1,5 +1,6 @@
 @use "../variables" as *;
 @use "../mixins" as *;
+@use "../global" as *;
 
 .projects {
   padding: 4rem 2rem;
@@ -8,11 +9,7 @@
   align-items: center;
 
   h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: $text-color;
-    margin-bottom: 2rem;
-    text-align: center;
+    @extend .section-title;
   }
 
   .projects-grid {
@@ -67,6 +64,12 @@
       flex-direction: column;
       align-items: center;
 
+      @media (max-width: 768px) {
+        padding: 1rem;
+        max-width: 100%;
+        max-height: 100%;
+      }
+
       .close {
         position: absolute;
         top: 10px;
@@ -79,11 +82,17 @@
         max-width: 100%;
         max-height: 70vh;
         margin-bottom: 1rem;
+
+        @media (max-width: 768px) {
+          max-height: 50vh;
+        }
       }
 
       .image-previews {
         display: flex;
         gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
 
         img {
           width: 60px;
@@ -99,6 +108,11 @@
 
           &:hover {
             border: 2px solid $primary-color;
+          }
+
+          @media (max-width: 768px) {
+            width: 50px;
+            height: 50px;
           }
         }
       }

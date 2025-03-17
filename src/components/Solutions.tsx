@@ -32,7 +32,7 @@ const Solutions = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
-      <h2>Soluções</h2>
+      <h2 className="section-title">Soluções</h2>
       <div className="solutions-grid">
         {solutions.map((solution) => (
           <div key={solution.id} className="solution-card">

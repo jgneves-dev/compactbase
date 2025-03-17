@@ -15,7 +15,7 @@ const Contact = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <h2>Contactos</h2>
+      <h2 className="section-title">Contactos</h2>
       <div className="contact-content">
         <form>
           <input type="text" placeholder="Seu Nome" required />
