@@ -48,4 +48,16 @@
       font-size: 1.2rem;
     }
   }
+
+  @include respond(xs) {
+    .hero-content {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
 }

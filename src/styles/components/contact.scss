@@ -4,7 +4,6 @@
 @use "sass:color";
 
 .contact {
-  padding: 4rem 2rem;
   background: $background-color;
   display: flex;
   flex-direction: column;
@@ -134,6 +133,28 @@
         &:hover {
           background: color.adjust($primary-color, $lightness: -10%);
         }
+      }
+    }
+  }
+
+  @include respond(xs) {
+    .contact-content {
+      gap: 1rem;
+    }
+
+    form {
+      input, textarea {
+        padding: 0.5rem;
+      }
+
+      button {
+        padding: 0.75rem;
+      }
+    }
+
+    .contact-info {
+      p {
+        font-size: 0.9rem;
       }
     }
   }

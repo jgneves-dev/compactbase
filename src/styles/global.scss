@@ -32,6 +32,12 @@ body {
   margin-right: auto;
 }
 
+@include respond(xs) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
 @keyframes scroll-left {
   0% {
     transform: translateX(100%);

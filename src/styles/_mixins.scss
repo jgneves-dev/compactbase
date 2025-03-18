@@ -9,6 +9,8 @@
     @media (max-width: 900px) { @content; }
   } @else if $breakpoint == desktop or $breakpoint == lg {
     @media (max-width: 1200px) { @content; }
+  } @else if $breakpoint == xs {
+    @media (max-width: 320px) { @content; }
   }
 }
 
@@ -41,7 +43,6 @@
 }
 
 // 🔹 Button Mixin (Custom Colors)
-
 @mixin button($bg-color, $text-color) {
   background: $bg-color;
   color: $text-color;
